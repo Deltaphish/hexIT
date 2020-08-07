@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #09CDDA;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+			}
+			p {
+				font-family: "Arial Black", Gadget, sans-serif;
+				font-size: 4em;
+				color: white;
+				cursor:pointer;
+			}
+		</style>
+	<script>
+		function copyToPaste() {
+			var text = "#09CDDA";
+			navigator.clipboard.writeText(text).then(function() {
+				  console.log('Async: Copying to clipboard was successful!');
+			}, function(err) {
+				  console.error('Async: Could not copy text: ', err);
+			});
+		}
+	</script>
+	</head>
+	<body>
+		<p onClick="copyToPaste()">#09CDDA</p>
+		<!-- Yoda was here --!>
+	</body>
+</html>
